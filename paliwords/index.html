@@ -3,129 +3,28 @@
 <head>
     <title>Pali words cheat sheet</title>
     <script src="ped.js"></script>
-    <style>
-        #userFile {display:inline-block;}
-        #sliderForm {display:inline-block;}
-        #generateButton {display:inline-block; margin-left: 30px;}
-        #note {color:red;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="paliwords.css">
 </head>    
 <body>
 
 <h2>Pāḷi words cheat sheet</h2>
 <ol>
-    <li>Download a study text file from <a href="https://static.sirimangalo.org/mahasi/">here</a> (e.g. "Paticcasamuppada.htm") and click on the left button to open it.</li>
-    <li>Use the slider to select the number of the pali words with the highest number of hits (default: 15).</li>
-    <li>Click on the right button to get the pali words sheet. <i>Output format:</i> Pāḷi word (number of hits): description</li>
+    <li class="stdLi">Download a study text file from <a href="https://static.sirimangalo.org/mahasi/">here</a> (e.g. "Paticcasamuppada.htm") 
+        and click on the left button to open it.</li>
+    <li class="stdLi">Use the slider to select the number of the most frequently found pāḷi words to be shown (default: 15).</li>
+    <li class="stdLi">Click on the right button to get the pali words sheet. <i>Output format:</i> Pāḷi word (number of hits): description</li>
 </ol> 
-<p id="note">Note: Currently, only the Chrome Webbrowser (latest version) ist supported.</p>
+<p id="note">Note: Currently, only the Chrome Webbrowser (latest version) is supported.</p>
 <input type="file" id="userFile"/>
 <form name="sliderForm" id="sliderForm">
     <input type="range" min="1" max="100" value="15" id="sliderInput" oninput="sliderOutput.value = sliderInput.value">
     <output id="sliderOutput">15</output>
 </form>
-<button onclick="generateSheet()" id="generateButton">Generate Pali Sheet</button>
+<button onclick="generateSheet()" id="generateButton">Create Pali Sheet</button>
 
-<p id="listOfWords"></p>
+<ul id="listOfWords"></ul>
 
-<script>
-    var replMap = { 'ā':'a', 'ī':'i', 'ṅ':'n', 'ṇ':'n', 'ñ':'n', 'ū':'u' };
-    var replRegex = new RegExp('[' + Object.keys(replMap).join('') + ']', 'ig');
-
-    function replSpecialChars(input) {
-        return replMap[input];
-    }
-
-    var ped = data[0].words;
-    
-    const input = document.getElementById('userFile');
-    const reader = new FileReader();
-
-    input.onchange = function() {
-        const file = input.files[0];
-        reader.readAsText(file);
-    };
-
-    function generateSheet() {
-        const noOfWords = document.getElementById("sliderInput").value;
-        var text = reader.result;
-        var words = text.match(/((?<=<i>))(.*?)(?=<\/i>)/g).toString().toLowerCase();
-        words = words.replace(/[;.:]|s(?!\S)/g,'');
-        words = words.replace(/s(?=,)/g,'');
-        words = words.replace(/ic(?=,)/g,'a');
-        const regex1 = /\s*,\s*|\s/;
-        var arrayOfWords = words.split(regex1);
-        var paliWords = [], occ = [], occSorted = [], pedDescr = [], prev, notFound = "";
-        arrayOfWords.sort();
-        for (var i = 0; i < arrayOfWords.length; i++) {
-            if (arrayOfWords[i].substring(0,1).match(/[a-z]/) && arrayOfWords[i] !== prev) {
-                paliWords.push(arrayOfWords[i]);
-                occ.push(1); 
-            } else {
-                occ[occ.length-1]++;
-            }
-            prev = arrayOfWords[i];
-        }
-        occSorted = occ.slice();
-        occSorted.sort(function(a, b){return b - a});
-        var thresholdOcc = occSorted[noOfWords - 1];
-
-        for (var i = 0; i < paliWords.length; i++) {
-            if (occ[i] >= thresholdOcc) {
-                var j = 0;
-                var match = false;
-                pedDescr[i] = "(No translation was found.)";
-                var paliWordTemp = paliWords[i].toLowerCase().replace(replRegex, replSpecialChars);
-                while (j < ped.length && !match) {
-                    var pedWord = ped[j].word.toLowerCase().replace(replRegex, replSpecialChars);
-                    var pedWordSubstr1 = pedWord.substring(0, pedWord.length-1);
-                    if (pedWord.localeCompare(paliWordTemp) === 0 || pedWordSubstr1.localeCompare(paliWordTemp) === 0) {
-                        pedDescr[i] = ped[j].description;
-                        match = true;
-                    }
-                    if (!match && (pedWord.substring(0, 3).localeCompare(paliWordTemp.substring(1, 4)) === 0)) {  
-                        var pedDescrTemp = ped[j].description.replace(replRegex, replSpecialChars);
-                        var advancedMatch = pedDescrTemp.toString().indexOf("**"+paliWordTemp+"**");
-                        if (advancedMatch !== -1) { 
-                            pedDescr[i] = ped[j].description.substring(advancedMatch + 
-                            paliWordTemp.length + 4, advancedMatch + paliWordTemp.length + 4 + 200);
-                            match = true;
-                        }       
-                    }
-                    j++;
-                } 
-            } if (!match) {
-                notFound = notFound.concat(paliWordTemp+",");
-            }         
-        }   
-        for (var i = 0; i < paliWords.length; i++) {
-            if (notFound.indexOf(","+paliWords[i].toLowerCase().replace(replRegex, replSpecialChars)+",") !== -1) {
-                var j = 0;
-                var match = false;
-                var paliWordTemp = paliWords[i].toLowerCase().replace(replRegex, replSpecialChars);
-                while (j < ped.length && !match) {
-                    var pedDescrTemp = ped[j].description.replace(replRegex, replSpecialChars);
-                    var advancedMatch = pedDescrTemp.toString().indexOf("**"+paliWordTemp+"**");
-                    if (advancedMatch !== -1) { 
-                        pedDescr[i] = ped[j].description.substring(advancedMatch + 
-                        paliWordTemp.length + 4, advancedMatch + paliWordTemp.length + 4 + 200);
-                        match = true;
-                    }
-                    j++;
-                } 
-            }
-        }        
-        var list = '<ul>';
-        paliWords.forEach(function(word, index) {
-            if (occ[index] >= thresholdOcc) {
-                list += '<li>'+ word + ' (' + occ[index] + ') : ' + pedDescr[index].substring(0,180) + " [...]" + '</li>';
-            }
-        }); 
-        list += '</ul>';
-         
-        document.getElementById('listOfWords').innerHTML = list; 
-    };
-</script>
+<script src="paliwords.js"></script>
 
 </body>
 </html> 
