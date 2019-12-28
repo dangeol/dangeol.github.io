@@ -1,18 +1,29 @@
+.header {
+    background-color: rgb(255, 238, 212);
+    padding: 10px;
+    font-size: 15px;
+    width: 100%;
+}
+h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 button {
     display: inline-block;
 }
 #userFile {
     display: inline-block;
+    margin-top: 9px;
 }
 #sliderForm {
     display: inline-block;
+    margin-top: 9px;
 }
 #generateButton {
     display: inline-block; 
-    margin-left: 30px;
-}
-#note {
-    color:red;
+    height: 28px;
+    margin-left: 20px;
+    margin-top: 9px;
 }
 li {
     margin-bottom: 10px;
@@ -21,17 +32,16 @@ li {
     margin-bottom: 0px;
 }
 input[type="range"] { 
-    margin: auto;
+    margin-left: 10px;
     vertical-align:-6px;
     -webkit-appearance: none;
     position: relative;
     overflow: hidden;
     height: 18px;
-    width: 200px;
+    width: 15vw;
     cursor: pointer;
     border-radius: 0; 
 }
-
 ::-webkit-slider-runnable-track {
     background: #ddd;
 }
@@ -80,4 +90,27 @@ input[type="range"] {
 }
 ::-ms-tooltip { 
     display: none;
+}
+#text {
+    height: 68vh; 
+    width: 100%;
+    overflow-y: hidden;
+    cursor: pointer;
+    padding: 10px;
+}
+#translation {
+    display: none;
+    height: 20vh; 
+    width: 100%;
+    overflow-y: auto;
+    cursor: pointer;
+    border-style: dashed;
+    background-color: rgb(249, 250, 203);
+    padding: 10px;
+}
+#glossary {
+    height: 88vh;
+    overflow-y: auto;
+    font-size: small;
+    cursor: pointer;
 }

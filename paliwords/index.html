@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pali words cheat sheet</title>
     <script src="ped.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="paliwords.css">
 </head>    
 <body>
 
-<h2>Pāḷi words cheat sheet</h2>
-<ol>
-    <li class="stdLi">Download a study text file from <a href="https://static.sirimangalo.org/mahasi/">here</a> (e.g. "Paticcasamuppada.htm") 
-        and click on the left button to open it.</li>
-    <li class="stdLi">Use the slider to select the number of the most frequently found pāḷi words to be shown (default: 15).</li>
-    <li class="stdLi">Click on the right button to get the pali words sheet. <i>Output format:</i> Pāḷi word (number of hits): description</li>
-</ol> 
-<p id="note">Note: Currently, only the Chrome Webbrowser (latest version) is supported.</p>
-<input type="file" id="userFile"/>
-<form name="sliderForm" id="sliderForm">
-    <input type="range" min="1" max="100" value="15" id="sliderInput" oninput="sliderOutput.value = sliderInput.value">
-    <output id="sliderOutput">15</output>
-</form>
-<button onclick="generateSheet()" id="generateButton">Create Pali Sheet</button>
+<div class="container">
+    <div class="row">
+        <div class="header row" id="header">
+            <h2>Pāḷi words</h2>
+            <input type="file" id="userFile"/>
+            <form name="sliderForm" id="sliderForm">
+                <input type="range" min="1" max="100" value="15" id="sliderInput" oninput="sliderOutput.value = sliderInput.value">
+                <output id="sliderOutput">15</output>
+            </form>
+            <button onclick="getText()" id="generateButton">Get Output</button>
+        </div> 
+        <div class="col-md-9">    
+            <div class="row">  
+                <div id="text">
+                    <div id="text">
+                        <ol>
+                            <li class="stdLi">Download a study text file from <a href="https://static.sirimangalo.org/mahasi/">here</a> 
+                                (e.g. "Paticcasamuppada.htm") and click on the left button to open it.</li>
+                            <li class="stdLi">Use the range slider to select the number of the most frequently found pāḷi words to be 
+                                shown (default: 15).</li>
+                            <li class="stdLi">Click on the "Get Output" button.</li>
+                            <li class="stdLi">Click on a pāḷi word in the text or in the hit list to show its translation.</li>
+                        </ol> 
+                    </div>
+                </div>
+            </div>     
+            <div class="row">  
+                <div id="translation"></div>
+            </div> 
+        </div>    
+        <div id="glossary" class="col-md-3">
+            <ul id="listOfWords"></ul>
+        </div>
+    </div>
 
-<ul id="listOfWords"></ul>
+</div>    
 
 <script src="paliwords.js"></script>
 
