@@ -22,19 +22,18 @@
                 <input type="range" min="1" max="100" value="15" id="sliderInput" oninput="sliderOutput.value = sliderInput.value">
                 <output id="sliderOutput">15</output>
             </form>
-            <button onclick="getText()" id="generateButton">Get Output</button>
+            <button onclick="pw.main.updateHitList()" id="refreshButton">Refresh</button>
         </div> 
-        <div class="col-md-9">    
+        <div class="col-md-10">    
             <div class="row">  
                 <div id="text">
-                    <div id="text">
+                    <div id="text" class="textNoOverflow">
                         <ol>
-                            <li class="stdLi">Download a study text file from <a href="https://static.sirimangalo.org/mahasi/">here</a> 
-                                (e.g. "Paticcasamuppada.htm") and click on the left button to open it.</li>
-                            <li class="stdLi">Use the range slider to select the number of the most frequently found pāḷi words to be 
-                                shown (default: 15).</li>
-                            <li class="stdLi">Click on the "Get Output" button.</li>
-                            <li class="stdLi">Click on a pāḷi word in the text or in the hit list to show its translation.</li>
+                            <li class="stdLi">Download a text/html-file containing pāḷi words (e.g. from <a href="https://static.sirimangalo.org/mahasi/">here</a>) 
+                                and click on the left button to load it.</li>
+                            <li class="stdLi">Click on a pāḷi word in the text or in the hit list to show its translation.</li>    
+                            <li class="stdLi">Optional: Use the range slider to change the number of the most frequently found pāḷi words to be 
+                                shown (default: 15). Click then on the "Refresh" button.</li>
                         </ol> 
                     </div>
                 </div>
@@ -43,7 +42,7 @@
                 <div id="translation"></div>
             </div> 
         </div>    
-        <div id="glossary" class="col-md-3">
+        <div id="glossary" class="col-md-2">
             <ul id="listOfWords"></ul>
         </div>
     </div>

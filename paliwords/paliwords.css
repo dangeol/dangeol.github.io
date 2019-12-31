@@ -19,14 +19,20 @@ button {
     display: inline-block;
     margin-top: 9px;
 }
-#generateButton {
+#refreshButton {
     display: inline-block; 
     height: 28px;
     margin-left: 20px;
     margin-top: 9px;
 }
+ul {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 0px 8px;
+    list-style-type: none;
+}
 li {
-    margin-bottom: 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 0px 8px
 }
 .stdLi {
     margin-bottom: 0px;
@@ -91,15 +97,17 @@ input[type="range"] {
 ::-ms-tooltip { 
     display: none;
 }
-#text {
+.textNoOverflow {
+    overflow-y: hidden;
+}
+.text {
     height: 68vh; 
     width: 100%;
-    overflow-y: hidden;
+    overflow-y: auto;
     cursor: pointer;
     padding: 10px;
 }
-#translation {
-    display: none;
+.translation {
     height: 20vh; 
     width: 100%;
     overflow-y: auto;
@@ -111,6 +119,33 @@ input[type="range"] {
 #glossary {
     height: 88vh;
     overflow-y: auto;
-    font-size: small;
+    font-size: medium;
     cursor: pointer;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.hitsHeader {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(148, 79, 0); 
+}
+.listWord {
+    font-size: 15px;
+    font-weight: bold;
+}
+.listHits {
+    font-size: 15px;
+    font-style: italic;
+    color: blue;
+}
+.translWord {
+    font-size: 18px;
+    font-weight: bold;
+}
+.translPedDescr {
+    font-size: medium;
+}
+.translNotFound {
+    font-size: 18px;
+    font-weight: bold;
 }
