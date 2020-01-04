@@ -25,6 +25,22 @@ button {
     margin-left: 20px;
     margin-top: 9px;
 }
+.stdOl {
+    margin: 10px 10px 10px 30px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+}
+.stdUl {
+    margin: 10px 10px 10px 30px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+.stdLi {
+    margin: auto;
+    padding: auto;
+    margin-bottom: 10px;
+}
 ul {
     margin: 0px 0px 0px 0px;
     padding: 5px 0px 0px 8px;
@@ -33,9 +49,6 @@ ul {
 li {
     margin: 0px 0px 0px 0px;
     padding: 5px 0px 0px 8px
-}
-.stdLi {
-    margin-bottom: 0px;
 }
 input[type="range"] { 
     margin-left: 10px;
@@ -97,8 +110,14 @@ input[type="range"] {
 ::-ms-tooltip { 
     display: none;
 }
-.textNoOverflow {
-    overflow-y: hidden;
+.intro {
+    display: block;
+}
+.about {
+    display: block;
+}
+.hidden {
+    display: none;
 }
 .text {
     height: 68vh; 
@@ -138,9 +157,14 @@ input[type="range"] {
     font-style: italic;
     color: blue;
 }
-.translWord {
+.translPedWord {
     font-size: 18px;
     font-weight: bold;
+}
+.translCpedDescr {
+    font-size: 18px;
+    font-weight: italic;
+    color: rgb(88, 88, 88);
 }
 .translPedDescr {
     font-size: medium;
