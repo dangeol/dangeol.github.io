@@ -53,7 +53,7 @@ const Cta = ({
         >
           <div className="cta-slogan">
             <h3 className="m-0">
-              For previewing layouts and visual?
+              Book your FREE get-to-know Zoom call (30 min).
               </h3>
           </div>
           <div className="cta-action">

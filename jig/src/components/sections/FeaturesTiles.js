@@ -3,6 +3,12 @@ import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
+import featureTileIcon01 from './../../assets/images/feature-tile-icon-01.svg';
+import featureTileIcon02 from './../../assets/images/feature-tile-icon-02.svg';
+import featureTileIcon03 from './../../assets/images/feature-tile-icon-03.svg';
+import featureTileIcon04 from './../../assets/images/feature-tile-icon-04.svg';
+import featureTileIcon05 from './../../assets/images/feature-tile-icon-05.svg';
+import featureTileIcon06 from './../../assets/images/feature-tile-icon-06.svg';
 
 const propTypes = {
   ...SectionTilesProps.types
@@ -45,11 +51,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Are you looking for a job in Germany?',
-    paragraph:                   
-    <p>
-    Job application training for Germany is the perfect program for you. It’s 12 weeks of coaching that will prepare you to find the next opportunity that’s a perfect fit for your career. 
-    You will also learn German language skills which are essential when looking for a job in Germany.
-    </p>
+    paragraph: 'Job application training for Germany is the perfect program for you. It’s 12 weeks of coaching that will prepare you to find the next opportunity that’s a perfect fit for your career. You will also learn German language skills which are essential when looking for a job in Germany.'    
   };
 
   return (
@@ -67,7 +69,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-01.svg')}
+                      src={featureTileIcon01}
                       alt="Features tile icon 01"
                       width={64}
                       height={64} />
@@ -89,7 +91,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-02.svg')}
+                      src={featureTileIcon02}
                       alt="Features tile icon 02"
                       width={64}
                       height={64} />
@@ -111,7 +113,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-03.svg')}
+                      src={featureTileIcon03}
                       alt="Features tile icon 03"
                       width={64}
                       height={64} />
@@ -133,7 +135,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-04.svg')}
+                      src={featureTileIcon04}
                       alt="Features tile icon 04"
                       width={64}
                       height={64} />
@@ -155,7 +157,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-05.svg')}
+                      src={featureTileIcon05}
                       alt="Features tile icon 05"
                       width={64}
                       height={64} />
@@ -177,7 +179,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/feature-tile-icon-06.svg')}
+                      src={featureTileIcon06}
                       alt="Features tile icon 06"
                       width={64}
                       height={64} />

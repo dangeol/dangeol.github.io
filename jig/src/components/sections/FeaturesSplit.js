@@ -51,12 +51,7 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: 'Start your new career today with Job in Germany!',
-    paragraph:
-    <p>
-    With Job application training for Germany, you can be sure that you are fully prepared to find the best job possible in Germany. 
-    The program offers individual coaching and access to exclusive resources, so you can confidently apply for jobs and get hired quickly. 
-    Learning German will also give you an edge over other applicants.
-    </p>
+    paragraph: 'With Job application training for Germany, you can be sure that you are fully prepared to find the best job possible in Germany. The program offers individual coaching and access to exclusive resources, so you can confidently apply for jobs and get hired quickly. Learning German will also give you an edge over other applicants.'
   };
 
   return (
@@ -104,14 +99,12 @@ const FeaturesSplit = ({
                 <h3 className="mt-0 mb-12">
                   What we offer
                   </h3>
-                <p className="m-0">
-                  <ul>
-                    <li>We will help you assess your skills and interests to find a career that is the best fit for you in Germany.</li>
-                    <li>We are here to help every step of the way, from preparing your resume and cover letter, to interviewing tips, and everything in between!</li>
-                    <li>Help with the Visa application process and recognition of professional qualifications.</li>
-                    <li>German language courses as individual 1:1 lessons, taylored to your specific needs.</li>
-                  </ul>
-                  </p>
+                <ul className="m-0">
+                  <li>We will help you assess your skills and interests to find a career that is the best fit for you in Germany.</li>
+                  <li>We are here to help every step of the way, from preparing your resume and cover letter, to interviewing tips, and everything in between!</li>
+                  <li>Help with the Visa application process and recognition of professional qualifications.</li>
+                  <li>German language courses as individual 1:1 lessons, taylored to your specific needs.</li>
+                </ul>
               </div>
               <div className={
                 classNames(
