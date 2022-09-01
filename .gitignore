@@ -1,15 +1,16 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/jig/node_modules
+**/node_modules
+
 .pnp
 .pnp.js
 
 # testing
-/jig/coverage
+**/coverage
 
 # production
-/jig/build
+**/build
 
 # misc
 .DS_Store
@@ -23,3 +24,10 @@
 *yarn-error.log*
 
 *.jpg
+
+.DS_Store
+dist
+dist-ssr
+*.local
+SiteNoticeCont.js
+address.png

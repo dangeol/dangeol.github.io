@@ -2,6 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import { SectionTilesProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
+import ButtonGroup from '../elements/ButtonGroup';
+import Button from '../elements/Button';
 import Image from '../elements/Image';
 import featureTileIcon01 from './../../assets/images/feature-tile-icon-01.svg';
 import featureTileIcon02 from './../../assets/images/feature-tile-icon-02.svg';
@@ -51,7 +53,7 @@ const FeaturesTiles = ({
 
   const sectionHeader = {
     title: 'Are you looking for a job in Germany?',
-    paragraph: 'Job application training for Germany is the perfect program for you. It’s 12 weeks of coaching that will prepare you to find the next opportunity that’s a perfect fit for your career. You will also learn German language skills which are essential when looking for a job in Germany.'    
+    paragraph: 'Job application training for Germany is the perfect program for you. It’s 8 weeks of 1:1 coaching that will prepare you to find the next opportunity that’s a perfect fit for your career. You will also learn German language skills which are essential when looking for a job in Germany.'    
   };
 
   return (
@@ -91,7 +93,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={featureTileIcon02}
+                      src={featureTileIcon04}
                       alt="Features tile icon 02"
                       width={64}
                       height={64} />
@@ -135,7 +137,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={featureTileIcon04}
+                      src={featureTileIcon02}
                       alt="Features tile icon 04"
                       width={64}
                       height={64} />
@@ -196,6 +198,16 @@ const FeaturesTiles = ({
               </div>
             </div>
 
+            <div className="reveal-from-bottom" data-reveal-delay="600">
+              <ButtonGroup>
+                <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                  Book a FREE call
+                  </Button>
+                <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
+                  Book a package
+                  </Button>
+              </ButtonGroup>
+            </div>
           </div>
         </div>
       </div>

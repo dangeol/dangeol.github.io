@@ -2,32 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Button from '../elements/Button';
 
 const propTypes = {
-  ...SectionProps.types,
-  split: PropTypes.bool
+  children: PropTypes.node,
+  ...SectionProps.types
 }
 
 const defaultProps = {
-  ...SectionProps.defaults,
-  split: false
+  children: null,
+  ...SectionProps.defaults
 }
 
-const Cta = ({
+const ContactForm = ({
   className,
+  children,
   topOuterDivider,
   bottomOuterDivider,
   topDivider,
   bottomDivider,
   hasBgColor,
   invertColor,
-  split,
   ...props
 }) => {
 
   const outerClasses = classNames(
-    'cta section center-content-mobile reveal-from-bottom',
+    'section',
     topOuterDivider && 'has-top-divider',
     bottomOuterDivider && 'has-bottom-divider',
     hasBgColor && 'has-bg-color',
@@ -36,11 +35,10 @@ const Cta = ({
   );
 
   const innerClasses = classNames(
-    'cta-inner section-inner',
+    'section-inner',
     topDivider && 'has-top-divider',
-    bottomDivider && 'has-bottom-divider',
-    split && 'cta-split'
-  );  
+    bottomDivider && 'has-bottom-divider'
+  );
 
   return (
     <section
@@ -48,18 +46,10 @@ const Cta = ({
       className={outerClasses}
     >
       <div className="container">
-        <div
-          className={innerClasses}
-        >
-          <div className="cta-slogan">
-            <h3 className="m-0">
-              Book your FREE get-to-know Zoom call (30 min).
-              </h3>
-          </div>
-          <div className="cta-action">
-            <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                  Book a FREE call
-            </Button>
+        <div className={innerClasses}>
+          <div className="contact-form">
+            <iframe title="Contact Form" width="640px" height="1040px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAc6M6PhUOENUTTlJM0NMWEIxSU1LSlRHU01UVURVOC4u&embed=true" 
+              frameBorder="0" marginWidth="0" marginHeight="0" allowFullScreen webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true"> </iframe>
           </div>
         </div>
       </div>
@@ -67,7 +57,7 @@ const Cta = ({
   );
 }
 
-Cta.propTypes = propTypes;
-Cta.defaultProps = defaultProps;
+ContactForm.propTypes = propTypes;
+ContactForm.defaultProps = defaultProps;
 
-export default Cta;
+export default ContactForm;
