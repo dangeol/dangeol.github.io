@@ -200,10 +200,10 @@ const FeaturesTiles = ({
 
             <div className="reveal-from-bottom" data-reveal-delay="600">
               <ButtonGroup>
-                <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
+                <Button tag="a" color="primary" wideMobile href="https://app.paperbell.com/checkout/bookings/new?package_id=31805">
                   Book a FREE call
                   </Button>
-                <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
+                <Button tag="a" color="dark" wideMobile href="https://app.paperbell.com/checkout/packages/29410">
                   Book a package
                   </Button>
               </ButtonGroup>

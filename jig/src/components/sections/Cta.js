@@ -57,8 +57,8 @@ const Cta = ({
               </h3>
           </div>
           <div className="cta-action">
-            <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                  Book a FREE call
+            <Button tag="a" color="primary" wideMobile href="https://app.paperbell.com/checkout/bookings/new?package_id=31805">
+              Book a FREE call
             </Button>
           </div>
         </div>
