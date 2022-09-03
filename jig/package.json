@@ -1,9 +1,11 @@
 {
-  "name": "open-react-template",
+  "name": "job-in-germany",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dangeol.github.io",
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^4.0.0",
     "hidden-from-bots-react": "^1.0.0",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
@@ -18,6 +20,8 @@
     "url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
