@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/jig/static/css/main.bf89e7b6.css",
+    "main.js": "/jig/static/js/main.6b565148.js",
+    "static/media/DSC05273_modif.JPG": "/jig/static/media/DSC05273_modif.e99870893ed15b1b9558.JPG",
+    "static/media/iStock-522398249_modif.jpg": "/jig/static/media/iStock-522398249_modif.1269cc416818ef1f1487.jpg",
+    "static/media/stefan-widua-iPOZf3tQfHA-unsplash_modif.jpg": "/jig/static/media/stefan-widua-iPOZf3tQfHA-unsplash_modif.6a1782d96da1dc9471bc.jpg",
+    "static/media/charlesdeluvio-Lks7vei-eAg-unsplash.jpg": "/jig/static/media/charlesdeluvio-Lks7vei-eAg-unsplash.d0e8698d1734e1fa971f.jpg",
+    "static/media/illustration-section-01.svg": "/jig/static/media/illustration-section-01.980998916c8e9369ffab.svg",
+    "static/media/illustration-section-02.svg": "/jig/static/media/illustration-section-02.f11c21a9745d2454b81c.svg",
+    "static/media/address.png": "/jig/static/media/address.f4c903ea177a80ff588f.png",
+    "static/media/cta-illustration.svg": "/jig/static/media/cta-illustration.79633e4594ec76a3f01f.svg",
+    "index.html": "/jig/index.html",
+    "static/media/logo.svg": "/jig/static/media/logo.3b931fc4e4e9f7c9174bc2162314e585.svg",
+    "static/media/feature-tile-icon-06.svg": "/jig/static/media/feature-tile-icon-06.74b0477e38710535bd0e2526d669b6f8.svg",
+    "static/media/feature-tile-icon-05.svg": "/jig/static/media/feature-tile-icon-05.af2bae113bcfafa4eceac9401c7f3a5a.svg",
+    "static/media/feature-tile-icon-04.svg": "/jig/static/media/feature-tile-icon-04.1acd4dacd4ddf306c2e7f5da116b6137.svg",
+    "static/media/feature-tile-icon-03.svg": "/jig/static/media/feature-tile-icon-03.69e94e20efba0832770920ab1d93d073.svg",
+    "static/media/feature-tile-icon-01.svg": "/jig/static/media/feature-tile-icon-01.e13cef8e30c0472fc8b303cc0801113f.svg",
+    "static/media/feature-tile-icon-02.svg": "/jig/static/media/feature-tile-icon-02.469356592c7ce3b1abf53cca85e82fee.svg",
+    "main.bf89e7b6.css.map": "/jig/static/css/main.bf89e7b6.css.map",
+    "main.6b565148.js.map": "/jig/static/js/main.6b565148.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf89e7b6.css",
+    "static/js/main.6b565148.js"
+  ]
+}
